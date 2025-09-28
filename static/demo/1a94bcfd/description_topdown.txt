@@ -1,0 +1,53 @@
+{
+  "global_description": {
+    "room_type": [
+      "The room is a living space."
+    ],
+    "style": [
+      "The room has a modern style."
+    ],
+    "shape_and_size": [
+      "The room has an irregular L-shape."
+    ],
+    "local_density": [
+      "The room is moderately furnished with spaced out furniture."
+    ],
+    "symmetry": [
+      "The room does not exhibit symmetry in its layout."
+    ],
+    "functional_zones": [
+      "The room contains seating and storage areas."
+    ]
+  },
+  "large_objects_description": {
+    "summary": [
+      "There is a large sofa, a coffee table, a bookshelf, and a side table."
+    ],
+    "abosolute_arrangement": [
+      "The sofa is placed near the bottom-left corner.",
+      "The bookshelf is along the top-left wall.",
+      "The coffee table is centrally located.",
+      "The side table is along the bottom wall."
+    ],
+    "relative_positions": [
+      "The sofa is perpendicular to the coffee table.",
+      "The bookshelf is adjacent to the sofa.",
+      "The side table is parallel to the bottom wall."
+    ]
+  },
+  "small_objects_description": {
+    "summary": [
+      "There are small decorative items, books, and plants."
+    ],
+    "on_surfaces": [
+      "Books and small plants are placed on the coffee table.",
+      "Various decorative items are on the side table."
+    ],
+    "on_shelves": [
+      "Books and small objects are arranged on the bookshelf."
+    ],
+    "distribution_and_pattern": [
+      "The small objects are evenly distributed across tables and shelves."
+    ]
+  }
+}

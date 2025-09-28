@@ -1,0 +1,50 @@
+{
+  "global_description": {
+    "room_type": [
+      "The room is a kitchen."
+    ],
+    "style": [
+      "The overall style of the room is modern."
+    ],
+    "shape_and_size": [
+      "The room has a rectangular shape."
+    ],
+    "local_density": [
+      "The furniture is densely arranged along the walls."
+    ],
+    "symmetry": [
+      "The room lacks symmetry in its setup."
+    ],
+    "functional_zones": [
+      "There is a cooking zone along one side of the room."
+    ]
+  },
+  "large_objects_description": {
+    "summary": [
+      "Large objects in the room include a kitchen counter, a refrigerator, a stove, and cabinetry."
+    ],
+    "abosolute_arrangement": [
+      "The kitchen counter is positioned centrally along one wall.",
+      "The refrigerator is near the corner of the room.",
+      "The stove is integrated into the counter."
+    ],
+    "relative_positions": [
+      "The cabinets are mounted above the kitchen counter.",
+      "The refrigerator is adjacent to the counter."
+    ]
+  },
+  "small_objects_description": {
+    "summary": [
+      "Small objects include kitchen utensils, plates, and decorative items."
+    ],
+    "on_surfaces": [
+      "Various utensils and bowls are placed on the kitchen counter."
+    ],
+    "on_shelves": [
+      "Several bottles and containers are arranged on the shelves."
+    ],
+    "distribution_and_pattern": [
+      "The small objects are evenly distributed across the surfaces and shelves."
+    ]
+  }
+}

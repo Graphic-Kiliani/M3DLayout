@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for Text-to-3D Generation">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for Text-to-3D Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for Text-to-3D Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Zhuojiang Cai</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              Yiheng Zhang</a><sup>2*</sup>,</span>
+            <span class="author-block">
+              Mingdao Wang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Meitong Guo</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Xi Xu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              Tianxiao Li</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              Yuwang Wang</a><sup>3†</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Beihang University</span>
+            <span class="author-block"><sup>2</sup>National University of Singapore</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University</span>
+            <span class="author-block"><sup>4</sup>Aerospace Information Research Institute, Chinese Academy of Sciences</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <div class="author-block"><sup>*</sup>Equal contribution,</div>
+            <div class="author-block"><sup>†</sup>Corresponding author</div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Graphic-Kiliani/Infinigen-Dataset-Toolkit"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent progress in 3D generation has sparked growing interest in controllable scene synthesis from language. Layout
+            quality significantly affects the structural coherence and semantic alignment in text-to-3D scene synthesis. However, existing datasets for indoor layouts are often limited in scale,
+            diversity, or lack detailed structured annotations, which hinders robust learning and generalization. 
+          </p> 
+          <p>
+            To address these challenges, we present <b>MLayout, a large-scale, multi-source
+            dataset</b> for 3D indoor layout generation from structured text.
+            The dataset contains 16,929 layouts and over xxx object instances, collected from real-world scans, professional CAD
+            designs, and procedurally generated scenes, each paired with
+            detailed structured descriptions that cover global scene summaries, large furniture relations, and fine-grained item placements. This diverse and richly annotated resource supports
+            learning robust spatial and semantic patterns across a wide
+            range of indoor environments. 
+          </p> 
+          <p>
+            To evaluate the utility of
+            MLayout, we train a text-conditioned diffusion model as a
+            baseline for layout generation. Using this model, we conduct
+            ablation studies showing that progressively incorporating the
+            three data sources consistently improves generation quality,
+            demonstrating their complementary nature. The model also
+            achieves more realistic, semantically coherent, and controllable
+            layouts compared to recent state-of-the-art layout generation methods based on large language models. We hope
+            MLayout can serve as a useful foundation for future research
+            in text-driven 3D scene synthesis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Dataset demo -->
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Dataset Demo</h2>
+      <div class="columns is-multiline is-variable is-4">
+        <div class="column is-one-third-desktop is-half-tablet"
++          data-gif-url="/static/demo/1a94bcfd/scene.gif"
++          data-desc-url="/static/demo/1a94bcfd/description_topdown.txt">
+          <div class="card">
+            <div class="card-image" style="position: relative;">
+              <figure class="image is-4by3">
+                <img src="/static/demo/1a94bcfd/scene.gif" alt="Scene 1">
+              </figure>
+              <span class="tag is-dark is-small"
+                    style="position: absolute; top: 8px; right: 8px;">
+                GIF
+              </span>
+            </div>
+            <div class="card-content">
+              <p class="subtitle is-6 has-text-centered">
+               Livingroom
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third-desktop is-half-tablet"
++          data-gif-url="/static/demo/72555e70/scene.gif"
++          data-desc-url="/static/demo/72555e70/description_topdown.txt">
+          <div class="card">
+            <div class="card-image" style="position: relative;">
+              <figure class="image is-4by3">
+                <img src="/static/demo/72555e70/scene.gif" alt="Scene 2">
+              </figure>
+              <span class="tag is-dark is-small"
+                    style="position: absolute; top: 8px; right: 8px;">
+                GIF
+              </span>
+            </div>
+            <div class="card-content">
+              <p class="subtitle is-6 has-text-centered">
+               Bedroom
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third-desktop is-half-tablet"
++          data-gif-url="/static/demo/1b6500df/scene.gif"
++          data-desc-url="/static/demo/1b6500df/description_topdown.txt">
+          <div class="card">
+            <div class="card-image" style="position: relative;">
+              <figure class="image is-4by3">
+                <img src="/static/demo/1b6500df/scene.gif" alt="Scene 3">
+              </figure>
+              <span class="tag is-dark is-small"
+                    style="position: absolute; top: 8px; right: 8px;">
+                GIF
+              </span>
+            </div>
+            <div class="card-content">
+              <p class="subtitle is-6 has-text-centered">
+               Livingroom
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third-desktop is-half-tablet"
++          data-gif-url="/static/demo/fe9d962/scene.gif"
++          data-desc-url="/static/demo/fe9d962/description_topdown.txt">
+          <div class="card">
+            <div class="card-image" style="position: relative;">
+              <figure class="image is-4by3">
+                <img src="/static/demo/fe9d962/scene.gif" alt="Scene 4">
+              </figure>
+              <span class="tag is-dark is-small"
+                    style="position: absolute; top: 8px; right: 8px;">
+                GIF
+              </span>
+            </div>
+            <div class="card-content">
+              <p class="subtitle is-6 has-text-centered">
+               Bathroom
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third-desktop is-half-tablet"
++          data-gif-url="/static/demo/fe864e9/scene.gif"
++          data-desc-url="/static/demo/fe864e9/description_topdown.txt">
+          <div class="card">
+            <div class="card-image" style="position: relative;">
+              <figure class="image is-4by3">
+                <img src="/static/demo/fe864e9/scene.gif" alt="Scene 5">
+              </figure>
+              <span class="tag is-dark is-small"
+                    style="position: absolute; top: 8px; right: 8px;">
+                GIF
+              </span>
+            </div>
+            <div class="card-content">
+              <p class="subtitle is-6 has-text-centered">
+               Diningroom
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third-desktop is-half-tablet"
++          data-gif-url="/static/demo/1af9d939/scene.gif"
++          data-desc-url="/static/demo/1af9d939/description_topdown.txt">
+          <div class="card">
+            <div class="card-image" style="position: relative;">
+              <figure class="image is-4by3">
+                <img src="/static/demo/1af9d939/scene.gif" alt="Scene 6">
+              </figure>
+              <span class="tag is-dark is-small"
+                    style="position: absolute; top: 8px; right: 8px;">
+                GIF
+              </span>
+            </div>
+            <div class="card-content">
+              <p class="subtitle is-6 has-text-centered">
+               Kitchen
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+  
+        <!-- Dataset Demo -->
+      </div>
+    </div>
+    <!--/ Paper video. -->
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<div id="gif-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card" style="width: 1200px; max-width: 1200px;">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Preview</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body" style="display: flex; gap: 1rem; padding: 0;">
+      <!-- 左侧：GIF 动画 -->
+      <div id="modal-gif-container" class="modal-left" style="display: flex; justify-content: center; align-items: center; background: #fff;">
+        <img id="modal-gif" src="" alt="Animated Preview" style="max-width: 100%; max-height: 80vh;">
+      </div>
+      <!-- 右侧：描述文本（可滚动） -->
+      <div id="modal-desc-container" class="modal-right" style="max-height: 80vh; overflow-y: auto; padding: 1rem; background: #fafafa;">
+        <pre id="modal-desc" style="white-space: pre-wrap; line-height: 1.4; font-family: Menlo, monospace;"></pre>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <!-- <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Animation</h2>
+
+        <!-- Interpolating. -->
+        <!-- <h3 class="title is-4">Interpolating states</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div> 
+        </div>
+        <br/> -->
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p class="is-size-7">
+            This website's format is adapted from <a href="https://nerfies.github.io/">Nerfies Project Page</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
