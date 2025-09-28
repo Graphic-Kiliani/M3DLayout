@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="MLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for Text-to-3D Generation">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="3D Layout, dataset, generative model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for Text-to-3D Generation</title>
 
@@ -25,20 +25,20 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href=".static/css/bulma.min.css">
-  <link rel="stylesheet" href=".static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href=".static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href=".static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href=".static/css/index.css">
-  <link rel="icon" href=".static/images/favicon.svg">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" href="static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src=".static/js/fontawesome.all.min.js"></script>
-  <script src=".static/js/bulma-carousel.min.js"></script>
-  <script src=".static/js/bulma-slider.min.js"></script>
-  <script src=".static/js/index.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
 <body>
 
@@ -91,23 +91,23 @@
           <h1 class="title is-1 publication-title">M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Yiheng Zhang</a><sup>1*</sup>,</span>
+              <a href="https://github.com/Graphic-Kiliani" target="_blank">Yiheng Zhang</a><sup>1*</sup>,</span>
             <span class="author-block">
-              Zhuojiang Cai</a><sup>2*</sup>,</span>
+              <a href="https://www.caizhuojiang.com/" target="_blank">Zhuojiang Cai</a><sup>2*</sup>,</span>
             <span class="author-block">
               Mingdao Wang</a><sup>1*</sup>,
             </span>
             <span class="author-block">
-              Meitong Guo</a><sup>1</sup>,
+              Meitong Guo<sup>1</sup>,
             </span>
             <span class="author-block">
-              Tianxiao Li</a><sup>1</sup>,
+              <a href="https://github.com/tingyunaiai9" target="_blank">Tianxiao Li</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              Li Lin</a><sup>3</sup>,
+              Li Lin<sup>3</sup>,
             </span>
             <span class="author-block">
-              Yuwang Wang</a><sup>1†</sup>,
+              <a href="https://scholar.google.com/citations?user=KhFGpFIAAAAJ&hl=en" target="_blank">Yuwang Wang</a><sup>1†</sup>,
             </span>
           </div>
 
@@ -260,7 +260,7 @@
       .generator-img {
         display: block;
         width: 100vw;        
-        max-width: 1200px;   /* choose the size */
+        max-width:1000px;   /* choose the size */
         height: auto;
         margin: 0 auto;      
       }
@@ -272,8 +272,8 @@
       <h2 class="title is-3 has-text-centered">Scene Dataset Visualization</h2>
       <div class="columns is-multiline is-variable is-4">
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="static/scene/dataset/1a94bcfd/scene.gif"
-+          data-desc-url="static/scene/dataset/1a94bcfd/description_topdown.txt">
+          data-gif-url="static/scene/dataset/1a94bcfd/scene.gif"
+          data-desc-url="static/scene/dataset/1a94bcfd/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
@@ -292,8 +292,8 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="static/scene/dataset/72555e70/scene.gif"
-+          data-desc-url="static/scene/dataset/72555e70/description_topdown.txt">
+          data-gif-url="static/scene/dataset/72555e70/scene.gif"
+          data-desc-url="static/scene/dataset/72555e70/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
@@ -312,8 +312,8 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="static/scene/dataset/1b6500df/scene.gif"
-+          data-desc-url="static/scene/dataset/1b6500df/description_topdown.txt">
+          data-gif-url="static/scene/dataset/1b6500df/scene.gif"
+          data-desc-url="static/scene/dataset/1b6500df/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
@@ -332,8 +332,8 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="static/scene/dataset/fe9d962/scene.gif"
-+          data-desc-url="static/scene/dataset/fe9d962/description_topdown.txt">
+          data-gif-url="static/scene/dataset/fe9d962/scene.gif"
+          data-desc-url="static/scene/dataset/fe9d962/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
@@ -352,8 +352,8 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="static/scene/dataset/fe864e9/scene.gif"
-+          data-desc-url="static/scene/dataset/fe864e9/description_topdown.txt">
+          data-gif-url="static/scene/dataset/fe864e9/scene.gif"
+          data-desc-url="static/scene/dataset/fe864e9/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
@@ -372,8 +372,8 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="static/scene/dataset/1af9d939/scene.gif"
-+          data-desc-url="static/scene/dataset/1af9d939/description_topdown.txt">
+          data-gif-url="static/scene/dataset/1af9d939/scene.gif"
+          data-desc-url="static/scene/dataset/1af9d939/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
@@ -412,11 +412,11 @@
       <button class="delete" aria-label="close"></button>
     </header>
     <section class="modal-card-body" style="display: flex; gap: 1rem; padding: 0;">
-      <!-- 左侧：GIF 动画 -->
+      <!-- Left：GIF Animation -->
       <div id="modal-gif-container" class="modal-left" style="display: flex; justify-content: center; align-items: center; background: #fff;">
         <img id="modal-gif" src="" alt="Animated Preview" style="max-width: 100%; max-height: 80vh;">
       </div>
-      <!-- 右侧：描述文本（可滚动） -->
+      <!-- Right：Description（Rolling） -->
       <div id="modal-desc-container" class="modal-right" style="max-height: 80vh; overflow-y: auto; padding: 1rem; background: #fafafa;">
         <pre id="modal-desc" style="white-space: pre-wrap; line-height: 1.4; font-family: Menlo, monospace;"></pre>
       </div>
@@ -424,12 +424,144 @@
   </div>
 </div>
 
+<!-- Generated Layout Visualization -->
+<style>
+  .glv-title { margin-top: 3.2rem; }
+  .comparison-wrap{ max-width:1200px; margin:0 auto; }
+  .comparison-block{
+    display:grid;
+    grid-template-columns: 1.1fr 1.2fr 1fr 1fr; /* Prompt / GIF / Oblique / Topdown */
+    grid-template-rows: auto auto auto;        /* row1: big headers; row2: subheaders; row3: content */
+    gap: 12px 24px;
+    margin: 2.25rem 0 3rem;
+    align-items:start;
+  }
+  .cb-h-prompt  { grid-column:1; grid-row:1; text-align:center; font-weight:700; font-size:1.35rem; }
+  .cb-h-gif     { grid-column:2; grid-row:1; text-align:center; font-weight:700; font-size:1.35rem; }
+  .cb-h-retr    { grid-column:3 / span 2; grid-row:1; text-align:center; font-weight:700; font-size:1.35rem; }
+
+  .cb-h-oblique { grid-column:3; grid-row:2; text-align:center; font-weight:700; }
+  .cb-h-topdown { grid-column:4; grid-row:2; text-align:center; font-weight:700; }
+
+  .cb-prompt    { grid-column:1; grid-row:3; background:#fff; padding:12px 16px; border-left:4px solid #e5e7eb; line-height:1.55; }
+  .cb-gif       { grid-column:2; grid-row:3; }
+  .cb-oblique   { grid-column:3; grid-row:3; }
+  .cb-topdown   { grid-column:4; grid-row:3; }
+
+  .media-frame{
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:8px;
+  }
+  .media-frame img{ display:block; max-width:100%; height:auto; }
+  .media-frame .gif{ width:100%; height:auto; display:block; }
+  .comparison-wrap{ max-width: 1200px; margin: 0 auto; }
+</style>
+
+<style>
+  .kw-blue   { color:#3b82f6; }  /* 蓝 */
+  .kw-orange { color:#f59e0b; }  /* 橙 */
+  .kw-green  { color:#16a34a; }  /* 绿 */
+  .kw-red    { color:#ef4444; }  /* 红 */
+  .kw-purple { color:#7c3aed; }  /* 紫 */
+</style>
+
+<div class="comparison-wrap">
+<h2 class="title is-3 has-text-centered">Generated Layout Visualization</h2>
+  <!-- ===== Group 1: Bedroom ===== -->
+  <div class="comparison-block">
+    <div class="cb-h-prompt">Prompt</div>
+    <div class="cb-h-gif">Generated GIF</div>
+    <div class="cb-h-retr">Retrieved Scenes</div>
+    <div class="cb-h-oblique">Oblique View</div>
+    <div class="cb-h-topdown">Topdown View</div>
+    
+    <div class="cb-prompt">
+      &ldquo;The room is a bedroom with a neatly arranged sleeping area.
+      The bed is located near the wall corner, with
+      <span class="kw-blue">matching</span> furniture on either side.
+      A <span class="kw-orange">wardrobe</span> is positioned against the wall.&rdquo;
+    </div>
+
+    <div class="cb-gif media-frame">
+      <img class="gif" src="static/layout/generated/scene_bedroom.gif" alt="Generated GIF - bedroom">
+    </div>
+
+    <div class="cb-oblique media-frame">
+      <img src="static/images/scene_bedroom_oblique.png" alt="Oblique view - bedroom">
+    </div>
+
+    <div class="cb-topdown media-frame">
+      <img src="static/images/scene_bedroom_topdown.png" alt="Topdown view - bedroom">
+    </div>
+  </div>
+
+  <!-- ===== Group 2: Diningroom ===== -->
+  <div class="comparison-block">
+    <div class="cb-h-prompt">Prompt</div>
+    <div class="cb-h-gif">Generated GIF</div>
+    <div class="cb-h-retr">Retrieved Scenes</div>
+    <div class="cb-h-oblique">Oblique View</div>
+    <div class="cb-h-topdown">Topdown View</div>
+
+    <div class="cb-prompt">
+      &ldquo;In the dining room, a rectangular table sits
+      <span class="kw-red">in the center</span> surrounded by
+      <span class="kw-blue">six chairs</span>. Several
+      <span class="kw-orange">sideboards</span> are placed against each wall for extra storage.&rdquo;
+    </div>
+
+
+    <div class="cb-gif media-frame">
+      <img class="gif" src="static/layout/generated/scene_diningroom.gif" alt="Generated GIF - diningroom">
+    </div>
+
+    <div class="cb-oblique media-frame">
+      <img src="static/images/scene_diningroom_oblique.png" alt="Oblique view - diningroom">
+    </div>
+
+    <div class="cb-topdown media-frame">
+      <img src="static/images/scene_diningroom_topdown.png" alt="Topdown view - diningroom">
+    </div>
+  </div>
+
+  <!-- ===== Group 3: Livingroom ===== -->
+  <div class="comparison-block">
+    <div class="cb-h-prompt">Prompt</div>
+    <div class="cb-h-gif">Generated GIF</div>
+    <div class="cb-h-retr">Retrieved Scenes</div>
+    <div class="cb-h-oblique">Oblique View</div>
+    <div class="cb-h-topdown">Topdown View</div>
+
+    <div class="cb-prompt">
+      &ldquo;The room is a living room featuring a central seating arrangement.
+      A <span class="kw-blue">large sofa</span> faces a
+      <span class="kw-orange">coffee table</span> with
+      <span class="kw-green">chairs on either side</span> and a
+      <span class="kw-red">TV</span> stand against the wall.
+      <span class="kw-purple">Bookshelf with books and decorations</span> line another wall.&rdquo;
+    </div>
+
+
+    <div class="cb-gif media-frame">
+      <img class="gif" src="static/layout/generated/scene_livingroom.gif" alt="Generated GIF - livingroom">
+    </div>
+
+    <div class="cb-oblique media-frame">
+      <img src="static/images/scene_livingroom_oblique.png" alt="Oblique view - livingroom">
+    </div>
+
+    <div class="cb-topdown media-frame">
+      <img src="static/images/scene_livingroom_topdown.png" alt="Topdown view - livingroom">
+    </div>
+  </div>
+
+</div>
 
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src=".static/videos/teaser.mp4"
+        <source src="static/videos/teaser.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -448,49 +580,49 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/steve.mp4"
+            <source src="static/videos/steve.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/chair-tp.mp4"
+            <source src="static/videos/chair-tp.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/shiba.mp4"
+            <source src="static/videos/shiba.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/fullbody.mp4"
+            <source src="static/videos/fullbody.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/blueshirt.mp4"
+            <source src="static/videos/blueshirt.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/mask.mp4"
+            <source src="static/videos/mask.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-coffee">
           <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/coffee.mp4"
+            <source src="static/videos/coffee.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-toby">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/toby2.mp4"
+            <source src="static/videos/toby2.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -515,7 +647,7 @@
             would be impossible without nerfies since it would require going through a wall.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src=".static/videos/dollyzoom-stacked.mp4"
+            <source src="static/videos/dollyzoom-stacked.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -532,7 +664,7 @@
               samples that fall outside of a bounding box during rendering.
             </p>
             <video id="matting-video" controls playsinline height="100%">
-              <source src=".static/videos/matting.mp4"
+              <source src="static/videos/matting.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -558,7 +690,7 @@
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src=".static/images/interpolate_start.jpg"
+            <img src="static/images/interpolate_start.jpg"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Start Frame</p>
@@ -572,7 +704,7 @@
                    step="1" min="0" max="100" value="0" type="range">
           </div>
           <div class="column is-3 has-text-centered">
-            <img src=".static/images/interpolate_end.jpg"
+            <img src="static/images/interpolate_end.jpg"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
@@ -596,7 +728,7 @@
                  preload
                  playsinline
                  width="75%">
-            <source src=".static/videos/replay.mp4"
+            <source src="static/videos/replay.mp4"
                     type="video/mp4">
           </video>
         </div> -->
@@ -654,7 +786,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href=".static/videos/nerfies_paper.pdf">
+         href="static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
