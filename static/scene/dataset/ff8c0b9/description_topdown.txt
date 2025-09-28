@@ -1,0 +1,47 @@
+{
+  "global_description": {
+    "room_type": [
+      "The room is a bedroom."
+    ],
+    "style": [
+      "The style of the room is modern with a clean and minimalistic design."
+    ],
+    "shape_and_size": [
+      "The room has an irregular polygonal shape with a sufficient size to accommodate two beds."
+    ],
+    "local_density": [
+      "The density of items in the room is moderate with major furniture spaced apart."
+    ],
+    "symmetry": [
+      "The room does not exhibit symmetry as the distribution of furniture is not even."
+    ],
+    "functional_zones": [
+      "There are two functional zones in the room, one for sleeping with beds and another for storage with a shelf."
+    ]
+  },
+  "large_objects_description": {
+    "summary": [
+      "The room contains large objects such as two beds, a large rug, and shelving units."
+    ],
+    "abosolute_arrangement": [
+      "The beds are positioned perpendicular to each other, with one bed placed in the corner adjacent to two connecting walls, and the other bed positioned under the window area."
+    ],
+    "relative_positions": [
+      "The larger bed is positioned directly next to a bedside table, and the shelving unit is placed along the wall next to the window."
+    ]
+  },
+  "small_objects_description": {
+    "summary": [
+      "The room contains small objects including books, decorative items, and a lamp."
+    ],
+    "on_surfaces": [
+      "Books and a lamp are placed on the table surfaces."
+    ],
+    "on_shelves": [
+      "Decorative items are placed on the shelves along with books."
+    ],
+    "distribution_and_pattern": [
+      "The small objects are evenly distributed across the room on available surfaces and within shelf compartments."
+    ]
+  }
+}

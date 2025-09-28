@@ -1,0 +1,54 @@
+{
+  "global_description": {
+    "room_type": [
+      "The room is a dining area."
+    ],
+    "style": [
+      "The room has a modern style."
+    ],
+    "shape_and_size": [
+      "The room is rectangular."
+    ],
+    "local_density": [
+      "The area around the dining table is densely populated with chairs."
+    ],
+    "symmetry": [
+      "The room has a symmetrical arrangement with an equal number of chairs on each side of the table."
+    ],
+    "functional_zones": [
+      "The room comprises a central dining zone with surrounding storage and display units."
+    ]
+  },
+  "large_objects_description": {
+    "summary": [
+      "The room contains a large central dining table, a shelving unit, a console table, and cabinets."
+    ],
+    "abosolute_arrangement": [
+      "The dining table is located centrally in the room.",
+      "The shelving unit is positioned against the wall opposite the entry door.",
+      "The console table is placed against the right wall.",
+      "The cabinets are located against the left wall."
+    ],
+    "relative_positions": [
+      "The dining table is surrounded by chairs on all sides.",
+      "The console table is adjacent to the shelving unit on the same wall."
+    ]
+  },
+  "small_objects_description": {
+    "summary": [
+      "Various small decorative and functional items are present in the room."
+    ],
+    "on_surfaces": [
+      "The dining table has dishes and decorative pieces on its surface.",
+      "The console table has vases and decorative items.",
+      "The cabinets feature bowls and small containers."
+    ],
+    "on_shelves": [
+      "The shelving unit contains boxes and books."
+    ],
+    "distribution_and_pattern": [
+      "The small objects are distributed evenly along the surfaces of the furniture.",
+      "Decorative items are symmetrically placed on either side of the console table."
+    ]
+  }
+}

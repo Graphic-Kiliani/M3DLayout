@@ -1,0 +1,47 @@
+{
+  "global_description": {
+    "room_type": [
+      "The room is a living area with seating arrangements."
+    ],
+    "style": [
+      "The room features a contemporary style."
+    ],
+    "shape_and_size": [
+      "The room has an L-shaped layout with moderately sized dimensions."
+    ],
+    "local_density": [
+      "The room is moderately furnished with furniture and decor."
+    ],
+    "symmetry": [
+      "The room displays asymmetry in the arrangement of furniture and decor."
+    ],
+    "functional_zones": [
+      "There are distinct zones for seating and other activities."
+    ]
+  },
+  "large_objects_description": {
+    "summary": [
+      "The room includes a sofa, a round rug, and a bookshelf."
+    ],
+    "abosolute_arrangement": [
+      "The sofa is placed on the larger circle rug adjacent to the circular rug."
+    ],
+    "relative_positions": [
+      "The bookshelf is positioned along the wall opposite the seating area."
+    ]
+  },
+  "small_objects_description": {
+    "summary": [
+      "There are various decorative items and books arranged in the room."
+    ],
+    "on_surfaces": [
+      "Small decorative items are placed on the console table and bookshelves."
+    ],
+    "on_shelves": [
+      "The shelves contain books and small sculptures."
+    ],
+    "distribution_and_pattern": [
+      "The small objects are evenly distributed across the shelves and surfaces."
+    ]
+  }
+}

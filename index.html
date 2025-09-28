@@ -88,34 +88,33 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for Text-to-3D Generation</h1>
+          <h1 class="title is-1 publication-title">M3DLayout: A Multi-Source Dataset of 3D Indoor Layouts and Structured Descriptions for 3D Generation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Zhuojiang Cai</a><sup>1*</sup>,</span>
+              Yiheng Zhang</a><sup>1*</sup>,</span>
             <span class="author-block">
-              Yiheng Zhang</a><sup>2*</sup>,</span>
+              Zhuojiang Cai</a><sup>2*</sup>,</span>
             <span class="author-block">
-              Mingdao Wang</a><sup>3</sup>,
+              Mingdao Wang</a><sup>1*</sup>,
             </span>
             <span class="author-block">
-              Meitong Guo</a><sup>3</sup>,
+              Meitong Guo</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              Xi Xu</a><sup>4</sup>,
+              Tianxiao Li</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              Tianxiao Li</a><sup>3</sup>,
+              Li Lin</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              Yuwang Wang</a><sup>3†</sup>,
+              Yuwang Wang</a><sup>1†</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Beihang University</span>
-            <span class="author-block"><sup>2</sup>National University of Singapore</span>
-            <span class="author-block"><sup>3</sup>Tsinghua University</span>
-            <span class="author-block"><sup>4</sup>Aerospace Information Research Institute, Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>Beihang University</span>
+            <span class="author-block"><sup>3</sup>Migu Beijing Research Institute</span>
           </div>
 
           <div class="is-size-6 publication-authors">
@@ -127,16 +126,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -144,19 +134,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/Graphic-Kiliani/Infinigen-Dataset-Toolkit"
+                <a href="https://github.com/Graphic-Kiliani/M3DLayout-A-Multi-Source-Dataset-of-3D-Indoor-Layouts-and-Structured-Descriptions-for-3D-Generation"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -164,15 +144,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -181,53 +152,132 @@
     </div>
   </div>
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+  <!-- Teaser -->
+  <section class="section" style="padding-top: 0;">
+    <h2 class="title is-3 has-text-centered">Teaser</h2>
+    <div class="teaser-full">
+      <img
+        src="/static/images/fig_teaser_v3.png"
+        alt="M3DLayout Teaser"
+        class="teaser-img"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </section>
+
+  <style>
+    .teaser-full {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+    .teaser-img {
+      display: block;
+      width: 100vw;        
+      max-width: 1200px;   /* choose the size */
+      height: auto;
+      margin: 0 auto;      
+    }
+  </style>
+    <!--/ Teaser -->
+    <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+          
           <p>
-            Recent progress in 3D generation has sparked growing interest in controllable scene synthesis from language. Layout
-            quality significantly affects the structural coherence and semantic alignment in text-to-3D scene synthesis. However, existing datasets for indoor layouts are often limited in scale,
-            diversity, or lack detailed structured annotations, which hinders robust learning and generalization. 
+            In text-driven 3D scene generation, object layout serves as a crucial intermediate representation
+            that bridges high-level language instructions with detailed geometric output. It not only provides a
+            structural blueprint for ensuring physical plausibility but also supports semantic controllability and
+            interactive editing. 
           </p> 
-          <p>
-            To address these challenges, we present <b>MLayout, a large-scale, multi-source
-            dataset</b> for 3D indoor layout generation from structured text.
-            The dataset contains 16,929 layouts and over xxx object instances, collected from real-world scans, professional CAD
-            designs, and procedurally generated scenes, each paired with
-            detailed structured descriptions that cover global scene summaries, large furniture relations, and fine-grained item placements. This diverse and richly annotated resource supports
-            learning robust spatial and semantic patterns across a wide
-            range of indoor environments. 
+          <p> 
+            However, the learning capabilities of current 3D indoor layout generation models
+            are constrained by the limited scale, diversity, and annotation quality of existing datasets. To address
+            this, we introduce <b>M3DLayout, a large-scale, multi-source dataset for 3D indoor layout generation</b>.
+            M3DLayout comprises <b>15,080 layouts</b> and over <b>258k object instances</b>, integrating three distinct
+            sources: real-world scans, professional CAD designs, and procedurally generated scenes. Each layout
+            is paired with detailed structured text describing global scene summaries, relational placements
+            of large furniture, and fine-grained arrangements of smaller items. This diverse and richly annotated
+            resource enables models to learn complex spatial and semantic patterns across a wide variety
+            of indoor environments. 
+          </p>   
+          <p></p>
+            To assess the potential of M3DLayout, we establish a benchmark using a
+            text-conditioned diffusion model. Experimental results demonstrate that our dataset provides a solid
+            foundation for training layout generation models. Its multi-source composition enhances diversity,
+            notably through the Inf3DLayout subset which provides rich small-object information, enabling the
+            generation of more complex and detailed scenes. We hope that M3DLayout can serve as a valuable
+            resource for advancing research in text-driven 3D scene synthesis.
           </p> 
-          <p>
-            To evaluate the utility of
-            MLayout, we train a text-conditioned diffusion model as a
-            baseline for layout generation. Using this model, we conduct
-            ablation studies showing that progressively incorporating the
-            three data sources consistently improves generation quality,
-            demonstrating their complementary nature. The model also
-            achieves more realistic, semantically coherent, and controllable
-            layouts compared to recent state-of-the-art layout generation methods based on large language models. We hope
-            MLayout can serve as a useful foundation for future research
-            in text-driven 3D scene synthesis.
-          </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    <!--/ Abstract -->
 
-    <!-- Dataset demo -->
+    <!-- Dataset Generator -->
+    <section class="section" style="padding-top: 0;">
+      <h2 class="title is-3 has-text-centered">Dataset Generator</h2>
+      <div class="generator-full">
+        <img
+          src="static/images/fig_data_pipeline.png"
+          alt="M3DLayout Generator"
+          class="generator-img"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          
+          <p>
+            This is our pipeline for constructing the M3DLayout dataset. Our framework integrates multi-source data, including the pro-
+            fessional designs dataset 3D-FRONT, real-world scans from Matterport3D, and procedurally generated scenes from Infinigen. The
+            construction process involves: meticulously generating, partitioning, and filtering layouts to create the Inf3DLayout subset; per-
+            forming template-based rules to produce formatted text; and employing global and local rendering for vision-language models
+            (VLM) to produce structured descriptions. This pipeline results in a large-scale, richly-annotated text-3D layout paired dataset.
+          </p> 
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <style>
+      .generator-full {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+      }
+      .generator-img {
+        display: block;
+        width: 100vw;        
+        max-width: 1200px;   /* choose the size */
+        height: auto;
+        margin: 0 auto;      
+      }
+    </style>
+    <!--/ Dataset Generator -->
+
+    <!-- Scene Dataset Visualization -->
     <div class="container">
-      <h2 class="title is-3 has-text-centered">Dataset Demo</h2>
+      <h2 class="title is-3 has-text-centered">Scene Dataset Visualization</h2>
       <div class="columns is-multiline is-variable is-4">
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="/static/demo/1a94bcfd/scene.gif"
-+          data-desc-url="/static/demo/1a94bcfd/description_topdown.txt">
++          data-gif-url="/static/scene/dataset/1a94bcfd/scene.gif"
++          data-desc-url="/static/scene/dataset/1a94bcfd/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
-                <img src="/static/demo/1a94bcfd/scene.gif" alt="Scene 1">
+                <img src="/static/scene/dataset/1a94bcfd/scene.gif" alt="Scene 1">
               </figure>
               <span class="tag is-dark is-small"
                     style="position: absolute; top: 8px; right: 8px;">
@@ -242,12 +292,12 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="/static/demo/72555e70/scene.gif"
-+          data-desc-url="/static/demo/72555e70/description_topdown.txt">
++          data-gif-url="/static/scene/dataset/72555e70/scene.gif"
++          data-desc-url="/static/scene/dataset/72555e70/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
-                <img src="/static/demo/72555e70/scene.gif" alt="Scene 2">
+                <img src="/static/scene/dataset/72555e70/scene.gif" alt="Scene 2">
               </figure>
               <span class="tag is-dark is-small"
                     style="position: absolute; top: 8px; right: 8px;">
@@ -262,12 +312,12 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="/static/demo/1b6500df/scene.gif"
-+          data-desc-url="/static/demo/1b6500df/description_topdown.txt">
++          data-gif-url="/static/scene/dataset/1b6500df/scene.gif"
++          data-desc-url="/static/scene/dataset/1b6500df/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
-                <img src="/static/demo/1b6500df/scene.gif" alt="Scene 3">
+                <img src="/static/scene/dataset/1b6500df/scene.gif" alt="Scene 3">
               </figure>
               <span class="tag is-dark is-small"
                     style="position: absolute; top: 8px; right: 8px;">
@@ -282,12 +332,12 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="/static/demo/fe9d962/scene.gif"
-+          data-desc-url="/static/demo/fe9d962/description_topdown.txt">
++          data-gif-url="/static/scene/dataset/fe9d962/scene.gif"
++          data-desc-url="/static/scene/dataset/fe9d962/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
-                <img src="/static/demo/fe9d962/scene.gif" alt="Scene 4">
+                <img src="/static/scene/dataset/fe9d962/scene.gif" alt="Scene 4">
               </figure>
               <span class="tag is-dark is-small"
                     style="position: absolute; top: 8px; right: 8px;">
@@ -302,12 +352,12 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="/static/demo/fe864e9/scene.gif"
-+          data-desc-url="/static/demo/fe864e9/description_topdown.txt">
++          data-gif-url="/static/scene/dataset/fe864e9/scene.gif"
++          data-desc-url="/static/scene/dataset/fe864e9/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
-                <img src="/static/demo/fe864e9/scene.gif" alt="Scene 5">
+                <img src="/static/scene/dataset/fe864e9/scene.gif" alt="Scene 5">
               </figure>
               <span class="tag is-dark is-small"
                     style="position: absolute; top: 8px; right: 8px;">
@@ -322,12 +372,12 @@
           </div>
         </div>
         <div class="column is-one-third-desktop is-half-tablet"
-+          data-gif-url="/static/demo/1af9d939/scene.gif"
-+          data-desc-url="/static/demo/1af9d939/description_topdown.txt">
++          data-gif-url="/static/scene/dataset/1af9d939/scene.gif"
++          data-desc-url="/static/scene/dataset/1af9d939/description_topdown.txt">
           <div class="card">
             <div class="card-image" style="position: relative;">
               <figure class="image is-4by3">
-                <img src="/static/demo/1af9d939/scene.gif" alt="Scene 6">
+                <img src="/static/scene/dataset/1af9d939/scene.gif" alt="Scene 6">
               </figure>
               <span class="tag is-dark is-small"
                     style="position: absolute; top: 8px; right: 8px;">
@@ -341,23 +391,16 @@
             </div>
           </div>
         </div>
+    
+        <div class="column is-12">
+          <p class="has-text-centered has-text-grey is-size-6"
+            style="font-style: italic; margin-top: 0.5rem;">
+            Click to see scene descriptions!
+          </p>
         </div>
-  
-        <!-- Dataset Demo -->
       </div>
     </div>
-    <!--/ Paper video. -->
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
+    <!--/ Scene Dataset Visualization -->
   </div>
 </section>
 
@@ -595,17 +638,16 @@
 </section>
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{zhang2025m3dlayout,
+  author    = {Zhang, Yiheng and Cai, Zhuojiang, and Wang, Mingdao, and Guo, Meitong, and Li, Tianxiao, and Lin, Li, and  Wang, Yuwang},
+  journal   = {arXiv preprint arXiv:},
+  year      = {2025},
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <!-- <footer class="footer">
@@ -646,7 +688,7 @@
       <div class="column is-8">
         <div class="content has-text-centered">
           <p class="is-size-7">
-            This website's format is adapted from <a href="https://nerfies.github.io/">Nerfies Project Page</a>.
+            This website's format is mainly adapted from <a href="https://nerfies.github.io/">Nerfies Project Page</a>. Thanks for their commitment!
           </p>
         </div>
       </div>
