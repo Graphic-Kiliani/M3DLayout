@@ -166,7 +166,7 @@
             However, the learning capabilities of current 3D indoor layout generation models
             are constrained by the limited scale, diversity, and annotation quality of existing datasets. To address
             this, we introduce <b>M3DLayout, a large-scale, multi-source dataset for 3D indoor layout generation</b>.
-            M3DLayout comprises <b>15,080 layouts</b> and over <b>258k object instances</b>, integrating three distinct
+            M3DLayout comprises <b>21,367  layouts</b> and over <b>433k object instances</b>, integrating three distinct
             sources: real-world scans, professional CAD designs, and procedurally generated scenes. Each layout
             is paired with detailed structured text describing global scene summaries, relational placements
             of large furniture, and fine-grained arrangements of smaller items. This diverse and richly annotated
@@ -534,7 +534,7 @@
     <div class="column is-four-fifths">
       <div class="content has-text-justified">
         <p>
-          We utilize our dataset to train a diffusion-based <b>layout generation model</b>. These are instances of our generated layouts and retrieved scenes from corresponding layouts (See more details about Object Retrieval in 
+          We utilize our dataset to train BOTH an autoregressive and a diffusion-based <b>layout generation model</b>. These are instances of our generated layouts and retrieved scenes from corresponding layouts (See more details about Object Retrieval in 
           <a href="https://github.com/Graphic-Kiliani/Object-Retrieval-Layout2Scene/tree/main"
           target="_blank" rel="noopener noreferrer">Github Repo</a>), 
           which indicates extremely strong object diversity, representative ability and semantic understanding.
