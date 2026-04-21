@@ -33,6 +33,10 @@ footer.footer {
   font-family: 'Google Sans', sans-serif;
 }
 
+.conference-highlight {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+}
 
 .publication-title {
 }
